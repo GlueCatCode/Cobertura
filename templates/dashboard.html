@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+  {% set ns = namespace(row=0) %}
+  {% for space in spaces %}
+    {% if ns.row != space.row %}
+      {% if ns.row %}
+        </div>
+      {% endif %}
+      <div class="row mb-3">
+      {% set ns.row = space.row %}
+    {% endif %}
+    <div class="col">
+      <div id="loader-{{space.script}}" class="loader"><div class="spinner-grow text-primary"></div></div>
+      <div id="space-{{space.script}}"></div>
+    </div>
+    {% if loop.index == spaces|length %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+{% endblock %}
+{% block script %}
+  {% print '<'|safe + 'script' + '>'|safe %}
+    $(function(){
+    {% for space in spaces %}
+      setSpace({{space|safe}});
+    {% endfor %}
+    });
+  {% print '<'|safe + '/script' + '>'|safe %}
+{% endblock %}

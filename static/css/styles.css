@@ -1,0 +1,6 @@
+.loader{
+    position: absolute;
+    margin: 10px 10px;
+    z-index: 1000;
+    display: none;
+}
