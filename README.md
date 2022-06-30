@@ -10,10 +10,11 @@ Dentre vários serviços podemos indicar o (Redis), elencando nesta problemátic
 - O serviço está ativo?
 - Cluster está funcional? Leitura e gravação de chaves?
 - Quais erros encontrados? Quais possíveis dicas para solução?
+![Screenshot_20220630_125821](https://user-images.githubusercontent.com/26276218/176724085-a6ea671f-e5ac-4e9b-a95e-427806416a82.png)
 
 ### Onde ficam os scripts?
-Ficam na pasta (scripts)[scripts] contendo até template html. A ideia é que cada caixinha seja um script como mostra a imagem abaixo:
-
+Ficam na pasta [scripts](scripts) contendo até template html. A ideia é que cada caixinha seja um script como mostra a imagem abaixo:
+![Screenshot_20220630_130034](https://user-images.githubusercontent.com/26276218/176724336-030d5702-c393-4449-8662-a5db4677fcce.png)
 
 ### Como instalar?
 ```shell
